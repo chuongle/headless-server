@@ -4,7 +4,7 @@
   "description": "GraphQL server that talks to Drupal Backend",
   "scripts": {
     "dev": "nodemon ./server.js --exec babel-node",
-    "start": "babel-node ./server.js"
+    "start": "./node_modules/.bin/babel-node ./server.js"
   },
   "author": "Chuong Le",
   "license": "MIT",
@@ -28,5 +28,8 @@
   },
   "peerDependencies": {
     "graphql": "^0.5.0 || ^0.6.0"
+  },
+  "engines": {
+    "node": "6.2.0"
   }
 }
