@@ -2,17 +2,12 @@ const express = require('express');
 const { apolloServer } = require('apollo-server');
 const schema = require('./data/schema');
 const resolvers = require('./data/resolvers');
+const cors = require('cors');
 const env = require('./environment');
 
 const GRAPHQL_PORT = env.port;
 const app = express();
-
-app.use((request, response, next) => {
-  response.header('Access-Control-Allow-Origin', '*'); // TODO: change to heroku link
-  response.header('Access-Control-Allow-Methods', 'POST');
-  response.header('Access-Control-Allow-Headers', 'Content-Type');
-  next();
-});
+app.use(cors());
 
 app.use('/graphql', apolloServer({
   graphiql: true,
