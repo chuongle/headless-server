@@ -14,4 +14,4 @@ schema {
 }
 `;
 
-export default [typeDefs];
+module.exports = [typeDefs];

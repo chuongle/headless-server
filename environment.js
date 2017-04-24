@@ -1,5 +1,3 @@
-'use strict';
-
 let env = {
   environment: process.env.NODE_ENV || 'development',
   port: process.env.PORT || 5000,
@@ -8,4 +6,4 @@ let env = {
   }
 }
 
-export default env;
+module.exports = env;

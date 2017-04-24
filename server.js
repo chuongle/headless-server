@@ -1,9 +1,9 @@
-import express from 'express';
-import { apolloServer } from 'apollo-server';
-import schema from './data/schema';
-import resolvers from './data/resolvers';
-import cors from 'cors';
-import env from './environment';
+const express = require('express');
+const { apolloServer } = require('apollo-server');
+const schema = require('./data/schema');
+const resolvers = require('./data/resolvers');
+const cors = require('cors');
+const env = require('./environment');
 
 const GRAPHQL_PORT = env.port;
 const app = express();

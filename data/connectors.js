@@ -1,5 +1,5 @@
-import rp from 'request-promise';
-import env from '../environment';
+const rp = require('request-promise');
+const env = require('../environment');
 
 const DRUPAL_URL = env.drupal.url;
 
@@ -21,4 +21,4 @@ const Camden = {
   },
 };
 
-export { Camden };
+module.exports = { Camden };

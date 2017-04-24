@@ -1,4 +1,4 @@
-import { Camden } from './connectors';
+const { Camden } = require('./connectors');
 
 const resolvers = {
   Query: {
@@ -15,4 +15,4 @@ const resolvers = {
   },
 };
 
-export default resolvers;
+module.exports = resolvers;
