@@ -7,6 +7,11 @@ const env = require('./environment');
 const GRAPHQL_PORT = env.port;
 const app = express();
 
+app.use((request, response, next) => {
+  response.header('Access-Control-Allow-Origin', '*');
+  next();
+});
+
 app.use('/graphql', apolloServer({
   graphiql: true,
   pretty: true,
