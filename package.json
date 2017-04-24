@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "GraphQL server that talks to Drupal Backend",
   "scripts": {
-    "start": "nodemon ./server.js --exec babel-node",
+    "dev": "nodemon ./server.js --exec babel-node",
+    "start": "babel-node ./server.js"
   },
   "author": "Chuong Le",
   "license": "MIT",
