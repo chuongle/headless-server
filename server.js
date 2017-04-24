@@ -8,7 +8,9 @@ const GRAPHQL_PORT = env.port;
 const app = express();
 
 app.use((request, response, next) => {
-  response.header('Access-Control-Allow-Origin', '*');
+  response.header('Access-Control-Allow-Origin', '*'); // TODO: change to heroku link
+  response.header('Access-Control-Allow-Methods', 'POST');
+  response.header('Access-Control-Allow-Headers', 'Content-Type');
   next();
 });
 
